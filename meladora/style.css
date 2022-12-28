@@ -29,6 +29,14 @@
     margin-bottom: 15%;
 }
 
+
+/* .bar-holder {
+    position: fixed;
+    width: 80%;
+    z-index: 9999;
+    background-color: black;
+} */
+
 .header-holder {
     width: 80%;
     height: 120%;
@@ -58,6 +66,8 @@
     display: flex;
     justify-content: space-between;
     margin: 2em 0;
+    z-index: 99999;
+    transition: .5s;
 }
 
 .navbar {
@@ -87,7 +97,7 @@
 
 .navbar a:hover {
     border-radius: 5px;
-    background-color: #91B40D;
+    background-color: #90b40db6;
     background-image: url("images/header/gr1.png");
     background-repeat: no-repeat;
     background-size: 1.8em;

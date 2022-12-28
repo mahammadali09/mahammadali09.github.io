@@ -33,3 +33,26 @@ barIcon.addEventListener('click', e => {
         menu.style.display = "none";
     }
 })
+
+window.addEventListener("wheel", fixingNavBar);
+
+
+function fixingNavBar(e) {
+    const navBar = document.querySelector(".navbar-holder");
+    if (e.deltaY > 0 && innerWidth > 1200) {
+        navBar.style.top = 0;
+        navBar.style.margin = 0;
+        navBar.style.width = "100%";
+        navBar.style.position = "fixed"
+        navBar.style.left = 0;
+        navBar.style.padding = ".5em 3em";
+        navBar.style.backgroundColor = "#91B40D";
+
+    } else if (innerWidth > 1200 && e.deltaY < 0) {
+        navBar.style.margin = "2em 0";
+        navBar.style.width = "100%";
+        navBar.style.position = "static"
+        navBar.style.padding = "0";
+        navBar.style.backgroundColor = "";
+    }
+}

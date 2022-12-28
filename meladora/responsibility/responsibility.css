@@ -56,6 +56,7 @@
     display: flex;
     justify-content: space-between;
     margin: 2em 0;
+    z-index: 99999;
 }
 
 .navbar {
@@ -90,9 +91,11 @@
     background-repeat: no-repeat;
     background-size: 1.8em;
     background-position: right bottom;
+    color: white;
 }
 
 #active {
+    color: white;
     border-radius: 5px;
     background-color: #91B40D;
     background-image: url("images/path2.png");
@@ -242,6 +245,10 @@
     padding: 1em 0;
 }
 
+.footer-bar a:hover {
+    color: #91B40D;
+}
+
 @media only screen and (max-width: 1200px) {
     .header {
         height: 900px;
@@ -314,6 +321,21 @@
     }
     .bg-wrapper {
         background-position-x: 40%;
+    }
+    .contact-bar {
+        display: none;
+    }
+    .navbar-holder {
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        padding: .5em 2em;
+        background-color: #91B40D;
+        position: fixed;
+    }
+    .logo-holder img {
+        width: 5em;
     }
 }
 

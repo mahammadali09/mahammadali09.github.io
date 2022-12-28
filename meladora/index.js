@@ -140,9 +140,12 @@ barIcon.addEventListener('click', e => {
     }
 })
 
-window.addEventListener("wheel", e => {
+window.addEventListener("wheel", fixingNavBar);
+
+
+function fixingNavBar(e) {
     const navBar = document.querySelector(".navbar-holder");
-    if (e.deltaY > 0) {
+    if (e.deltaY > 0 && innerWidth > 1200) {
         navBar.style.top = 0;
         navBar.style.margin = 0;
         navBar.style.width = "100%";
@@ -151,11 +154,11 @@ window.addEventListener("wheel", e => {
         navBar.style.padding = ".5em 3em";
         navBar.style.backgroundColor = "#91B40D";
 
-    } else {
+    } else if (innerWidth > 1200 && e.deltaY < 0) {
         navBar.style.margin = "2em 0";
         navBar.style.width = "100%";
         navBar.style.position = "static"
         navBar.style.padding = "0";
         navBar.style.backgroundColor = "";
     }
-})
+}

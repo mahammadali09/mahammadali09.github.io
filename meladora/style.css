@@ -67,11 +67,10 @@
     justify-content: space-between;
     margin: 2em 0;
     z-index: 99999;
-    transition: .5s;
 }
 
 .navbar {
-    transition: 1s;
+    transition: .5s;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -96,6 +95,7 @@
 }
 
 .navbar a:hover {
+    color: white;
     border-radius: 5px;
     background-color: #90b40db6;
     background-image: url("images/header/gr1.png");
@@ -560,6 +560,11 @@
 .footer-bar a {
     text-decoration: none;
     color: white;
+    transition: .5s;
+}
+
+.footer-bar a:hover {
+    color: #91B40D;
 }
 
 .li-head {
@@ -591,7 +596,7 @@
         flex-direction: column;
     }
     .pre-present {
-        display: none;
+        flex-direction: column;
     }
     .wwa-img {
         display: none;
@@ -694,5 +699,20 @@
     }
     h1 {
         font-size: 1.5em;
+    }
+    .contact-bar {
+        display: none;
+    }
+    .navbar-holder {
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        padding: .5em 2em;
+        background-color: #91B40D;
+        position: fixed;
+    }
+    .logo-holder img {
+        width: 5em;
     }
 }

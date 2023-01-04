@@ -81,6 +81,7 @@ function addGrids(imgList) {
             newDiv.className = "grid";
             const img = document.createElement("img");
             img.src = imgList[i];
+            img.id = i;
             newDiv.appendChild(img);
             if (i < 2) {
                 colContainer3.appendChild(newDiv);
@@ -89,6 +90,58 @@ function addGrids(imgList) {
             } else {
                 colContainer1.appendChild(newDiv);
             }
+            newDiv.addEventListener('click', e => {
+                gallery.style.opacity = ".1";
+                const carouselContainer = document.querySelector(".carousel-container");
+                carouselContainer.style.display = "flex";
+                carouselContainer.innerHTML = `
+                    <div class="carousel">
+                    <div class="carousel-x">
+                        <i class="fa-solid fa-x" style="color: white;"></i>
+                    </div>
+                    <div class="carousel-content">
+                        <div class="slide-left">
+                            <i class="fa-solid fa-circle-left"></i>
+                        </div>
+                        <div class="carousel-img">
+                            <img class="img" src="${imgList[e.target.id]}">
+                        </div>
+                        <div class="slide-right">
+                            <i class="fa-solid fa-circle-right"></i>
+                        </div>
+                    </div>
+                    </div>
+                `;
+                const carouselX = document.querySelector(".fa-x");
+                if (carouselX != null) {
+                    carouselX.addEventListener('click', e => {
+                        gallery.style.opacity = "1";
+                        carouselContainer.style.display = "none";
+                        carouselContainer.innerHTML = "";
+                    })
+                }
+
+                const left = document.querySelector(".slide-left");
+                const right = document.querySelector(".slide-right");
+                let counter = parseInt(e.target.id) + 1;
+                const img = document.querySelector(".img");
+                left.addEventListener('click', e => {
+                    img.src = imgList[counter];
+                    if (counter > 0) {
+                        console.log(counter)
+                        counter--
+                    }
+                })
+                right.addEventListener('click', e => {
+                    img.src = imgList[counter];
+                    if (counter < imgList.length - 1) {
+                        console.log(counter)
+                        counter++;
+                    }
+                })
+
+            })
+
         }
     }
     if (colContainer1.innerHTML != "") {
@@ -101,6 +154,8 @@ function addGrids(imgList) {
         }
     }
 }
+
+
 
 
 addGrids(images);

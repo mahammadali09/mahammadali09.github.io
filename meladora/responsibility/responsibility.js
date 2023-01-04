@@ -27,9 +27,11 @@ barIcon.addEventListener('click', e => {
         barIcon.classList.remove("fa-bars");
         barIcon.classList.add("fa-x");
         menu.style.display = "block";
+        barIcon.style.color = "white";
     } else {
         barIcon.classList.remove("fa-x");
         barIcon.classList.add("fa-bars");
+        barIcon.style.color = "91B40D";
         menu.style.display = "none";
     }
 })

@@ -26,10 +26,12 @@ barIcon.addEventListener('click', e => {
     if (barIcon.classList.contains("fa-bars")) {
         barIcon.classList.remove("fa-bars");
         barIcon.classList.add("fa-x");
+        barIcon.style.color = "white";
         menu.style.display = "block";
     } else {
         barIcon.classList.remove("fa-x");
         barIcon.classList.add("fa-bars");
+        barIcon.style.color = "91B40D";
         menu.style.display = "none";
     }
 })

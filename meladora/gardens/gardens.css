@@ -77,6 +77,10 @@
     display: inline-block;
 }
 
+.navbar li i {
+    color: white;
+}
+
 .navbar a {
     padding: 15px 30px;
     color: #3E3737;
@@ -284,8 +288,8 @@ h1 {
 
 .footer-end {
     margin-top: 2em;
-    border-top: white 1px solid;
-    color: white;
+    border-top: #3E3737 1px solid;
+    color: #3E3737;
     padding: 1em 0;
 }
 
@@ -294,8 +298,11 @@ h1 {
 }
 
 @media only screen and (max-width: 1200px) {
+    .bg-wrapper {
+        display: none;
+    }
     .header {
-        height: 900px;
+        height: 100px;
     }
     .navbar {
         display: none;
@@ -362,6 +369,7 @@ h1 {
     .img-container {
         display: flex;
         justify-content: center;
+        width: 60%;
     }
     .garden-content {
         display: flex;
@@ -390,6 +398,20 @@ h1 {
     .logo-holder img {
         width: 5em;
     }
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .gardens-wrapper {
+        margin-top: 0;
+    }
+    .bg-wrapper {
+        display: none;
+    }
+    .header {
+        height: 100px;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -398,6 +420,7 @@ h1 {
     .garden-3 {
         flex-direction: column-reverse;
         justify-content: center;
+        align-self: center;
     }
 }
 

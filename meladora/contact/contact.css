@@ -172,6 +172,7 @@
     background-image: url("images/Group417.png");
     background-repeat: no-repeat;
     background-position: top left;
+    overflow: hidden;
 }
 
 .contact-container * {
@@ -339,8 +340,8 @@
 
 .footer-end {
     margin-top: 2em;
-    border-top: white 1px solid;
-    color: white;
+    border-top: #3E3737 1px solid;
+    color: #3E3737;
     padding: 1em 0;
 }
 
@@ -417,6 +418,7 @@
         border: none;
     }
     .contact-container {
+        flex-direction: column;
         justify-content: center;
         align-self: center;
     }
@@ -440,6 +442,17 @@
     }
     h1 {
         font-size: 1.5em;
+    }
+    .bg-wrapper {
+        display: none;
+    }
+    .header {
+        height: 100px;
+    }
+    .contact-informations {
+        padding: 1em;
+        width: 90%;
+        margin: 5%;
     }
 }
 

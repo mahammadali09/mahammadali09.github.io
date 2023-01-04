@@ -595,9 +595,6 @@
     .garden-2 {
         flex-direction: column;
     }
-    .pre-present {
-        flex-direction: column;
-    }
     .wwa-img {
         display: none;
     }
@@ -714,5 +711,40 @@
     }
     .logo-holder img {
         width: 5em;
+    }
+    .header-holder {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    .pre-present {
+        height: 85%;
+        width: auto;
+        margin-top: 5em;
+        align-self: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+    .pre-item-name {
+        font-size: 1.5em;
+    }
+    .pre-item-text a {
+        font-size: 1em;
+    }
+    .pre-item img {
+        height: auto;
+        width: auto;
+    }
+    .garden-header {
+        font-size: 1.5em;
+    }
+    .pr-ul li {
+        font-size: 1em;
+    }
+    .blog-img img {
+        height: 230px;
+        width: auto;
     }
 }
